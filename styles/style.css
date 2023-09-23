@@ -61,7 +61,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 1rem 1rem 100px 1rem;
+  border-radius: 1rem 1rem 7rem 1rem;
 }
 
 .date__container {
@@ -203,6 +203,7 @@ input:hover {
     margin-right: auto;
     padding-left: 3rem;
     padding-right: 3rem;
+    border-radius: 1rem 1rem 12rem 1rem;
   }
 
   .date__container {
