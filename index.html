@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      color: hsl(0, 0%, 8%);
+    }
+
+    .attribution a {
+      color: hsl(259, 100%, 65%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container ">
+  <main>
+      <div class="date__container ">
+        <div class="date">Day
+          <input id="day" type="number" min="1" max="31" placeholder="DD" required>
+          <span class="error-msg"></span>
+          <span class="error-msg empty-field">This field is required</span>
+        </div>
+        <div class="date">Month
+          <input id="month" type="number" min="1" max="12" placeholder="MM" required>
+          <span class="error-msg"></span>
+          <span class="error-msg empty-field">This field is required</span>
+        </div>
+        <div class="date">Year
+          <input id="year" type="number" placeholder="YYYY" required>
+          <span class="error-msg"></span>
+          <span class="error-msg empty-field">This field is required</span>
+        </div>
+      </div>
+
+      <div class="btn-container ">
+        <div class="h-line "></div>
+        <button class="btn ">
+          <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44">
+            <g fill="none" stroke="#FFF" stroke-width="2">
+              <path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44" />
+            </g>
+          </svg>
+        </button>
+      </div>
+
+      <div class="bth">
+        <div><span class="bth-years">--</span> years</div>
+        <div><span class="bth-months">--</span> months</div>
+        <div><span class="bth-days">--</span> days</div>
+      </div>
+    </main>  
+    </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Ashish Behera</a>.
+  </div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>

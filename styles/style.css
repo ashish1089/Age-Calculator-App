@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap');
+
+:root {
+  /* Primary */
+  --clr-Purple: hsl(259, 100%, 65%);
+  --clr-Light-red: hsl(0, 100%, 67%);
+  /* Neutral */
+  --clr-White: hsl(0, 0%, 100%);
+  --clr-Offwhite: hsl(0, 0%, 94%);
+  --clr-Lightgrey: hsl(0, 0%, 86%);
+  --clr-Smokeygrey: hsl(0, 1%, 44%);
+  --clr-Offblack: hsl(0, 0%, 8%);
+
+  /* font-size */
+  --size-input: 32px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+* {
+  margin: 0;
+  line-height: calc(1em + 0.5rem);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--clr-Offwhite);
+}
+
+button {
+  border: none; 
+}
+
+.container {
+  max-width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all .9s ease;
+}
+
+main {
+  width: 100%;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  padding: 3rem 1.5rem;
+  background-color: var(--clr-White);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem 1rem 100px 1rem;
+}
+
+.date__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.date {
+  width: 6.5rem;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  color: var(--clr-Smokeygrey);
+  font-size: 1em;
+  letter-spacing: 0.2em;
+  font-weight: bold;
+  gap: .3em;
+}
+
+.date>input {
+  width: 100%;
+  outline: none;
+  border: 1px solid var(--clr-Lightgrey);
+  border-radius: 10px;
+  font-size: var(--size-input);
+  font-weight: bold;
+  padding: 1rem 1rem;
+  cursor: pointer;
+}
+
+
+.error-msg {
+  display: none;
+  font-size: .9rem;
+  color: var(--clr-Light-red);
+  font-style: italic;
+  text-transform: initial;
+  font-weight: normal;
+  letter-spacing: normal;
+}
+
+input:focus,
+input:hover {
+  border-color: var(--clr-Purple);
+}
+
+.btn-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  height: max-content;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.h-line {
+  position: absolute;
+  width: 16.3rem;
+  top: 1.85rem;
+  z-index: 0;
+  border-bottom: 2px solid var(--clr-Lightgrey);
+}
+
+.btn {
+  width: max-content;
+  background-color: var(--clr-Purple);
+  border-radius: 50%;
+  padding: .5em;
+  margin: .5em;
+  cursor: pointer;
+  z-index: 1;
+  transition: background-color 0.3s ease-in-out;
+
+}
+
+.btn>svg {
+  width: 25px;
+  height: 23px;
+}
+
+.btn:hover {
+  background-color: var(--clr-Offblack);
+}
+
+
+.bth {
+  width: 100%;
+  text-align: left;
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 800;
+  color: var(--clr-Offblack);
+}
+
+.bth-years,
+.bth-months,
+.bth-days {
+  color: var(--clr-Purple);
+}
+
+/* Moblie-375px */
+@media (min-width: 375px) {
+  .container {
+    max-width: 375px;
+  }
+
+  .h-line {
+    min-width: 20.3rem;
+    top: 2.5rem;
+  }
+
+  .btn {
+    width: 4rem;
+    aspect-ratio: 1/1;
+    display: grid;
+    place-content: center;
+  }
+
+  .btn>svg {
+    width: 30px;
+    height: 28px;
+  }
+
+}
+
+/* Desktop: 1440px */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  }
+
+  main {
+    width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .date__container {
+    justify-content: start;
+  }
+
+  .date {
+    width: 11rem;
+  }
+
+  .btn-container {
+    justify-content: flex-end;
+    margin-top: 0;
+    margin-bottom: 0;
+
+  }
+
+  .h-line {
+    width: 37.4375rem;
+    top: 3.625rem;
+    right: 6.4375rem;
+  }
+
+  .btn {
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+  }
+
+  .btn>svg {
+    width: 46px;
+    height: 44px;
+  }
+
+  .bth {
+    font-size: 5rem;
+  }
+}
